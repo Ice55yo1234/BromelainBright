@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://bromelainbright.com/sitemap.xml
+
+# Bromelain Bright - Premium Pineapple Enzyme Skincare

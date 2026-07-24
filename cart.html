@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart — Bromelain Bright</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animation.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-logo">Bromelain <span>Bright</span></a><div class="nav-links"><a href="index.html" data-i18n="nav.home">Home</a><a href="products.html" data-i18n="nav.products">Products</a><a href="shop.html" data-i18n="nav.shop">Shop</a><a href="research.html" data-i18n="nav.research">Research</a><a href="sustainability.html" data-i18n="nav.sustainability">Sustainability</a><a href="company.html" data-i18n="nav.company">Company</a><a href="contact.html" data-i18n="nav.contact">Contact</a></div><div class="nav-actions">
+        <button id="lang-toggle" onclick="toggleLang()" class="btn btn-outline" style="padding:4px 8px;font-size:var(--fs-xs);border-color:var(--gray-200);color:var(--forest);background:transparent;" title="Switch Language">🇬🇧 EN</button><a href="cart.html" style="position:relative" class="active"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-badge" style="display:none">0</span></a></div><div class="nav-hamburger"><span></span><span></span><span></span></div></div></nav>
+  <div class="nav-mobile"><a href="index.html" data-i18n="nav.home">Home</a><a href="products.html" data-i18n="nav.products">Products</a><a href="shop.html" data-i18n="nav.shop">Shop</a><a href="contact.html" data-i18n="nav.contact">Contact</a></div>
+
+  <div class="page-header"><div class="container"><span class="text-overline">Shopping</span><h1>Your Cart</h1></div></div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="grid-template-columns:2fr 1fr;gap:var(--space-2xl);align-items:start;">
+        <div>
+          <div class="cart-items"></div>
+          <div class="cart-empty" style="display:none;text-align:center;padding:var(--space-4xl);">
+            <div style="font-size:4rem;margin-bottom:var(--space-lg);">🛒</div>
+            <h3>Your cart is empty</h3>
+            <p style="color:var(--gray-500);margin-top:var(--space-sm);">Discover our premium skincare collection.</p>
+            <a href="shop.html" class="btn btn-primary" style="margin-top:var(--space-xl);">Shop Now</a>
+          </div>
+        </div>
+        <div class="cart-summary"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom"><span>© 2024 Bromelain Bright.</span><span>Made with 🍍 in Thailand</span></div></div></footer>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script><script src="js/shop.js"></script><script src="js/animation.js"></script><script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Skin Analysis — Bromelain Bright</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animation.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-logo">Bromelain <span>Bright</span></a><div class="nav-links"><a href="index.html" data-i18n="nav.home">Home</a><a href="products.html" data-i18n="nav.products">Products</a><a href="shop.html" data-i18n="nav.shop">Shop</a><a href="research.html" data-i18n="nav.research">Research</a><a href="sustainability.html" data-i18n="nav.sustainability">Sustainability</a><a href="company.html" data-i18n="nav.company">Company</a><a href="contact.html" data-i18n="nav.contact">Contact</a></div><div class="nav-actions">
+        <button id="lang-toggle" onclick="toggleLang()" class="btn btn-outline" style="padding:4px 8px;font-size:var(--fs-xs);border-color:var(--gray-200);color:var(--forest);background:transparent;" title="Switch Language">🇬🇧 EN</button><a href="cart.html" style="position:relative"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-badge" style="display:none">0</span></a></div><div class="nav-hamburger"><span></span><span></span><span></span></div></div></nav>
+  <div class="nav-mobile"><a href="index.html" data-i18n="nav.home">Home</a><a href="products.html" data-i18n="nav.products">Products</a><a href="shop.html" data-i18n="nav.shop">Shop</a><a href="contact.html" data-i18n="nav.contact">Contact</a></div>
+
+  <div class="page-header"><div class="container"><span class="text-overline">AI Technology</span><h1>Smart Skin Analysis</h1><p>Upload your photo and let our AI recommend the perfect Bromelain Bright products for your skin.</p></div></div>
+
+  <section class="section">
+    <div class="container-narrow">
+      <!-- Upload Area -->
+      <div class="card" style="padding:var(--space-3xl);text-align:center;" data-aos="fade-up" id="upload-area">
+        <div style="border:2px dashed var(--gray-300);border-radius:var(--radius-lg);padding:var(--space-4xl);cursor:pointer;transition:all var(--duration) var(--ease);" onclick="document.getElementById('file-input').click()" id="drop-zone">
+          <div style="font-size:4rem;margin-bottom:var(--space-lg);">📸</div>
+          <h3>Upload Your Photo</h3>
+          <p style="color:var(--gray-500);margin-top:var(--space-sm);">Click to upload or drag and drop</p>
+          <p style="color:var(--gray-400);font-size:var(--fs-xs);margin-top:var(--space-sm);">JPG, PNG up to 5MB • Your photo is not stored</p>
+          <input type="file" id="file-input" accept="image/*" style="display:none">
+        </div>
+        <button onclick="runDemoAnalysis()" class="btn btn-sage" style="margin-top:var(--space-xl);">Or Try Demo Analysis →</button>
+      </div>
+
+      <!-- Results (hidden by default) -->
+      <div id="analysis-results" style="display:none;">
+        <div class="card" style="padding:var(--space-2xl);margin-top:var(--space-xl);" data-aos="fade-up">
+          <div style="text-align:center;margin-bottom:var(--space-2xl);">
+            <div style="font-size:3rem;margin-bottom:var(--space-md);">🤖</div>
+            <h2>Your Skin Analysis</h2>
+            <p style="color:var(--gray-500);">Based on AI analysis of your skin photo</p>
+          </div>
+
+          <!-- Score -->
+          <div style="text-align:center;margin-bottom:var(--space-2xl);">
+            <div style="width:150px;height:150px;border-radius:50%;border:6px solid var(--sage);display:flex;align-items:center;justify-content:center;margin:0 auto;">
+              <div><div style="font-family:var(--font-display);font-size:var(--fs-4xl);font-weight:700;color:var(--sage);">87</div><div style="font-size:var(--fs-xs);color:var(--gray-400);">Skin Score</div></div>
+            </div>
+          </div>
+
+          <!-- Metrics -->
+          <div class="grid grid-2" style="gap:var(--space-lg);">
+            <div>
+              <div class="ingredient-bar"><div class="ingredient-bar-label"><span>💧 Hydration Level</span><span>92%</span></div><div class="ingredient-bar-track"><div class="ingredient-bar-fill" data-width="92"></div></div></div>
+              <div class="ingredient-bar"><div class="ingredient-bar-label"><span>✨ Brightness</span><span>78%</span></div><div class="ingredient-bar-track"><div class="ingredient-bar-fill" data-width="78"></div></div></div>
+              <div class="ingredient-bar"><div class="ingredient-bar-label"><span>🧴 Texture</span><span>85%</span></div><div class="ingredient-bar-track"><div class="ingredient-bar-fill" data-width="85"></div></div></div>
+            </div>
+            <div>
+              <div class="ingredient-bar"><div class="ingredient-bar-label"><span>🛡️ Skin Barrier</span><span>80%</span></div><div class="ingredient-bar-track"><div class="ingredient-bar-fill" data-width="80"></div></div></div>
+              <div class="ingredient-bar"><div class="ingredient-bar-label"><span>⚡ Elasticity</span><span>83%</span></div><div class="ingredient-bar-track"><div class="ingredient-bar-fill" data-width="83"></div></div></div>
+              <div class="ingredient-bar"><div class="ingredient-bar-label"><span>🎯 Pore Size</span><span>75%</span></div><div class="ingredient-bar-track"><div class="ingredient-bar-fill" data-width="75"></div></div></div>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid var(--gray-200);margin:var(--space-2xl) 0;">
+
+          <!-- Skin Type -->
+          <div style="text-align:center;margin-bottom:var(--space-xl);">
+            <span class="text-overline">Detected Skin Type</span>
+            <h3 style="margin-top:var(--space-sm);">Combination Skin</h3>
+            <p style="color:var(--gray-500);font-size:var(--fs-sm);max-width:500px;margin:var(--space-sm) auto 0;">Your skin shows normal to slightly oily in the T-zone with drier cheeks. You'd benefit from balanced hydration and gentle enzyme exfoliation.</p>
+          </div>
+
+          <!-- Concerns -->
+          <div style="display:flex;flex-wrap:wrap;gap:var(--space-sm);justify-content:center;margin-bottom:var(--space-2xl);">
+            <span style="padding:8px 16px;background:rgba(var(--sage-rgb),0.1);border-radius:var(--radius-full);font-size:var(--fs-sm);color:var(--emerald);">Mild Dullness</span>
+            <span style="padding:8px 16px;background:rgba(var(--gold-rgb),0.1);border-radius:var(--radius-full);font-size:var(--fs-sm);color:var(--brown);">Uneven Tone</span>
+            <span style="padding:8px 16px;background:rgba(var(--sage-rgb),0.1);border-radius:var(--radius-full);font-size:var(--fs-sm);color:var(--emerald);">Light Dehydration</span>
+          </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="card" style="padding:var(--space-2xl);margin-top:var(--space-xl);">
+          <h3 style="text-align:center;margin-bottom:var(--space-xl);">🍍 Recommended Products</h3>
+          <div class="grid grid-3" id="ai-recommended"></div>
+          <div style="text-align:center;margin-top:var(--space-xl);">
+            <a href="shop.html" class="btn btn-primary btn-lg">Shop Recommended Products</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom"><span>© 2024 Bromelain Bright.</span><span>Made with 🍍 in Thailand</span></div></div></footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script src="js/i18n.js"></script>
+  <script src="js/app.js"></script><script src="js/shop.js"></script><script src="js/animation.js"></script><script src="js/auth.js"></script>
+  <script>
+    AOS.init({duration:800,once:true,offset:80});
+    document.getElementById('file-input')?.addEventListener('change', () => runDemoAnalysis());
+    function runDemoAnalysis() {
+      document.getElementById('upload-area').style.display = 'none';
+      document.getElementById('analysis-results').style.display = 'block';
+      renderProductCards(document.getElementById('ai-recommended'));
+      showToast('✨ Analysis complete!');
+    }
+  </script>
+</body>
+</html>

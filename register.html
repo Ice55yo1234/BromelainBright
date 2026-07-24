@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — Bromelain Bright</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animation.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg, var(--cream), var(--beige));">
+  <div style="max-width:440px;width:90%;margin:var(--space-xl);">
+    <div style="text-align:center;margin-bottom:var(--space-lg);">
+      <a href="index.html" class="btn btn-secondary btn-sm" style="margin-bottom:var(--space-md);background:var(--white);">← เข้าชมหน้าแรกของเว็บ (ไม่ต้องเข้าสู่ระบบ)</a>
+      <br>
+      <a href="index.html" class="nav-logo" style="font-size:var(--fs-2xl);">Bromelain <span style="color:var(--sage)">Bright</span></a>
+    </div>
+    <div class="card-glass" style="padding:var(--space-2xl);">
+      <h2 style="text-align:center;font-size:var(--fs-2xl);margin-bottom:var(--space-sm);">Create Account</h2>
+      <p style="text-align:center;color:var(--gray-500);font-size:var(--fs-sm);margin-bottom:var(--space-2xl);">Join the Bromelain Bright community</p>
+      <form id="register-form">
+        <div class="form-group"><label class="form-label">Full Name</label><input type="text" name="name" class="form-input" placeholder="Your full name" required></div>
+        <div class="form-group"><label class="form-label">Email</label><input type="email" name="email" class="form-input" placeholder="you@example.com" required></div>
+        <div class="form-group"><label class="form-label">Password</label><input type="password" name="password" class="form-input" placeholder="Min. 6 characters" required></div>
+        <div class="form-group"><label class="form-label">Confirm Password</label><input type="password" name="confirm" class="form-input" placeholder="Repeat password" required></div>
+        <label style="display:flex;align-items:flex-start;gap:var(--space-sm);font-size:var(--fs-sm);color:var(--gray-500);cursor:pointer;margin-bottom:var(--space-xl);"><input type="checkbox" required style="margin-top:3px;"> I agree to the Terms of Service and Privacy Policy</label>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Create Account</button>
+      </form>
+      <div style="text-align:center;margin-top:var(--space-xl);font-size:var(--fs-sm);color:var(--gray-500);">
+        Already have an account? <a href="login.html" style="color:var(--sage);font-weight:600;">Sign in</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:var(--space-xl);"><a href="index.html" style="font-size:var(--fs-sm);color:var(--gray-400);">← Back to Home</a></div>
+  </div>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script><script src="js/auth.js"></script>
+</body>
+</html>

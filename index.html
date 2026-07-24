@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bromelain Bright — Premium Pineapple Enzyme Skincare</title>
+  <meta name="description" content="Transform your skin with the power of upcycled pineapple Bromelain Enzyme. Luxury sustainable skincare from Thailand.">
+  <meta property="og:title" content="Bromelain Bright — Premium Pineapple Enzyme Skincare">
+  <meta property="og:description" content="Luxury sustainable skincare powered by Bromelain Enzyme from upcycled pineapple cores.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loading-logo">Bromelain <span style="color:var(--sage)">Bright</span></div>
+    <div class="loading-bar"><div class="loading-bar-inner"></div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Bromelain <span>Bright</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+        <a href="products.html" data-i18n="nav.products">Products</a>
+        <a href="shop.html" data-i18n="nav.shop">Shop</a>
+        <a href="research.html" data-i18n="nav.research">Research</a>
+        <a href="sustainability.html" data-i18n="nav.sustainability">Sustainability</a>
+        <a href="company.html" data-i18n="nav.company">Company</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button id="lang-toggle" onclick="toggleLang()" class="btn btn-outline" style="padding:4px 8px;font-size:var(--fs-xs);border-color:var(--gray-200);color:var(--forest);background:transparent;" title="Switch Language">🇬🇧 EN</button>
+        <button class="search-btn" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="cart.html" title="Cart" style="position:relative;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-badge" style="display:none;">0</span>
+        </a>
+        <a href="login.html" class="auth-login-link" title="Login">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="dashboard.html" class="auth-dash-link" title="Dashboard" style="display:none;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+      </div>
+      <div class="nav-hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="shop.html">Shop</a>
+    <a href="research.html">Research</a>
+    <a href="sustainability.html">Sustainability</a>
+    <a href="company.html">Company</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <button class="search-overlay-close">✕</button>
+    <div class="search-overlay-inner">
+      <input type="text" class="search-overlay-input" placeholder="Search products...">
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container flex-between" style="min-height:100vh;">
+      <div class="hero-content">
+        <div class="hero-overline" data-hero-delay="0" data-i18n="hero.overline">🍍 Sustainable Beauty Innovation</div>
+        <h1 data-hero-delay="150" data-i18n="hero.title">
+          Nature's Secret to<br>
+          <span class="highlight">Radiant Skin</span>
+        </h1>
+        <p data-hero-delay="300" data-i18n="hero.subtitle">
+          Discover the transformative power of Bromelain Enzyme, extracted from upcycled pineapple cores. 
+          Premium skincare that's kind to your skin and the planet.
+        </p>
+        <div class="hero-actions" data-hero-delay="450">
+          <a href="shop.html" class="btn btn-primary btn-lg" data-i18n="hero.cta.shop">Shop Collection</a>
+          <a href="research.html" class="btn btn-secondary btn-lg" data-i18n="hero.cta.science">Our Science</a>
+        </div>
+        <div style="display:flex;gap:var(--space-2xl);margin-top:var(--space-3xl);" data-hero-delay="600">
+          <div>
+            <div style="font-family:var(--font-display);font-size:var(--fs-2xl);font-weight:700;color:var(--forest);">98%</div>
+            <div style="font-size:var(--fs-xs);color:var(--gray-400);">Natural Ingredients</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-display);font-size:var(--fs-2xl);font-weight:700;color:var(--forest);">5,000+</div>
+            <div style="font-size:var(--fs-xs);color:var(--gray-400);">Happy Customers</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-display);font-size:var(--fs-2xl);font-weight:700;color:var(--forest);">100%</div>
+            <div style="font-size:var(--fs-xs);color:var(--gray-400);">Cruelty Free</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float" data-parallax="0.3">
+        <div class="hero-float-circle"></div>
+        <div class="hero-float-circle"></div>
+        <div class="hero-float-circle"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:320px;">
+          <img src="assets/images/hero-products.png" alt="Bromelain Bright Products" style="width:100%;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.15));border-radius:var(--radius-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="text-overline">Our Collection</span>
+        <h2>The Complete Bromelain<br>Skincare Ritual</h2>
+        <p>Three carefully crafted products designed to work in harmony for your most radiant skin yet.</p>
+      </div>
+
+      <div class="grid grid-3" id="featured-products"></div>
+
+      <div class="text-center mt-2xl" data-aos="fade-up">
+        <a href="products.html" class="btn btn-secondary">View All Products →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Bromelain Bright -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="text-overline">Why Choose Us</span>
+        <h2>The Bromelain Bright Difference</h2>
+        <p>We combine cutting-edge science with sustainable practices to create skincare that truly transforms.</p>
+      </div>
+
+      <div class="grid grid-4" style="gap:var(--space-lg);">
+        <div class="icon-feature card" data-aos="fade-up" data-aos-delay="0">
+          <div class="icon-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4>Dermatologist Tested</h4>
+          <p>Clinically proven safe and effective for all skin types.</p>
+        </div>
+        <div class="icon-feature card" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <h4>Upcycled Ingredients</h4>
+          <p>Pineapple cores transformed into powerful skincare actives.</p>
+        </div>
+        <div class="icon-feature card" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h4>Cruelty Free</h4>
+          <p>Never tested on animals. Certified vegan and ethical.</p>
+        </div>
+        <div class="icon-feature card" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <h4>Research Based</h4>
+          <p>Backed by scientific research on Bromelain enzyme efficacy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Science Preview -->
+  <section class="section" style="background:var(--forest);color:var(--white);">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:center;">
+        <div data-aos="fade-right">
+          <span class="text-overline" style="color:var(--pineapple);">Scientific Innovation</span>
+          <h2 style="color:var(--white);margin-top:var(--space-md);">The Power of Bromelain Enzyme</h2>
+          <p style="color:rgba(255,255,255,0.7);margin-top:var(--space-lg);line-height:1.8;">
+            Bromelain is a powerful proteolytic enzyme naturally found in pineapple cores. Our proprietary extraction process preserves its maximum potency, delivering remarkable skin benefits:
+          </p>
+          <ul class="check-list" style="margin-top:var(--space-lg);">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span style="color:rgba(255,255,255,0.8);">Natural exfoliation removing dead skin cells</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span style="color:rgba(255,255,255,0.8);">Anti-inflammatory properties reducing redness</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span style="color:rgba(255,255,255,0.8);">Enhanced absorption of active ingredients</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span style="color:rgba(255,255,255,0.8);">Brightening and evening skin tone naturally</span>
+            </li>
+          </ul>
+          <a href="research.html" class="btn btn-gold" style="margin-top:var(--space-2xl);">Explore Our Research →</a>
+        </div>
+        <div data-aos="fade-left" style="text-align:center;">
+          <div style="background:rgba(255,255,255,0.05);border-radius:var(--radius-xl);padding:var(--space-3xl);border:1px solid rgba(255,255,255,0.1);">
+            <div style="font-size:6rem;margin-bottom:var(--space-lg);">🔬</div>
+            <div style="font-family:var(--font-display);font-size:var(--fs-3xl);font-weight:700;color:var(--pineapple);">15%</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:var(--fs-sm);margin-bottom:var(--space-lg);">Active Bromelain Concentration</div>
+            <div class="divider" style="background:var(--sage);margin:var(--space-lg) auto;"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg);margin-top:var(--space-lg);">
+              <div>
+                <div style="font-family:var(--font-display);font-size:var(--fs-xl);font-weight:700;">95%</div>
+                <div style="font-size:var(--fs-xs);color:rgba(255,255,255,0.5);">User Satisfaction</div>
+              </div>
+              <div>
+                <div style="font-family:var(--font-display);font-size:var(--fs-xl);font-weight:700;">4 Weeks</div>
+                <div style="font-size:var(--fs-xs);color:rgba(255,255,255,0.5);">Visible Results</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="section-sm" style="background:var(--beige);">
+    <div class="container">
+      <div class="grid grid-4" style="text-align:center;">
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-number" data-count="12000" data-suffix="+">0</div>
+          <div class="stat-label">Products Sold</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number" data-count="5000" data-suffix="+">0</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number" data-count="2500" data-suffix=" kg">0</div>
+          <div class="stat-label">Pineapple Waste Upcycled</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number" data-count="98" data-suffix="%">0</div>
+          <div class="stat-label">Natural Ingredients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:center;gap:var(--space-4xl);">
+        <div data-aos="fade-right">
+          <div style="background:linear-gradient(135deg, rgba(var(--sage-rgb),0.1), rgba(var(--pineapple-rgb),0.08));border-radius:var(--radius-xl);padding:var(--space-3xl);text-align:center;">
+            <div style="font-size:5rem;margin-bottom:var(--space-lg);">🌿</div>
+            <h3 style="margin-bottom:var(--space-md);">Circular Economy</h3>
+            <p style="color:var(--gray-500);font-size:var(--fs-sm);">From farm waste to premium skincare — closing the loop on sustainability.</p>
+            <div style="display:flex;justify-content:center;gap:var(--space-xl);margin-top:var(--space-xl);">
+              <div>
+                <div style="font-family:var(--font-display);font-size:var(--fs-xl);font-weight:700;color:var(--sage);" data-count="85" data-suffix="%">0</div>
+                <div style="font-size:var(--fs-xs);color:var(--gray-400);">Waste Reduced</div>
+              </div>
+              <div>
+                <div style="font-family:var(--font-display);font-size:var(--fs-xl);font-weight:700;color:var(--sage);" data-count="1200" data-suffix=" kg">0</div>
+                <div style="font-size:var(--fs-xs);color:var(--gray-400);">CO₂ Offset</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <span class="text-overline">Sustainability</span>
+          <h2 style="margin-top:var(--space-md);">Beauty Without Compromise</h2>
+          <p style="color:var(--gray-500);margin-top:var(--space-lg);line-height:1.8;">
+            Every Bromelain Bright product starts with pineapple cores that would otherwise be discarded. 
+            We partner with local Thai farms to collect this agricultural waste and transform it into 
+            powerful skincare ingredients.
+          </p>
+          <p style="color:var(--gray-500);margin-top:var(--space-md);line-height:1.8;">
+            Our eco-friendly packaging is recyclable and made from post-consumer materials. 
+            It's beauty that gives back to the earth.
+          </p>
+          <div style="display:flex;gap:var(--space-md);margin-top:var(--space-2xl);">
+            <a href="sustainability.html" class="btn btn-sage">Our Impact</a>
+            <a href="traceability.html" class="btn btn-secondary">Trace Your Product</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="text-overline">Testimonials</span>
+        <h2>Loved by Thousands</h2>
+        <p>Real stories from real people who've experienced the Bromelain Bright difference.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="testimonial-text">"After just 2 weeks, my skin has never looked brighter. The pineapple enzyme mask is absolutely divine — it feels luxurious and smells incredible!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">S</div>
+            <div>
+              <div class="testimonial-name">Siriwan T.</div>
+              <div class="testimonial-role">Bangkok, Thailand</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-text">"I love that it's made from upcycled pineapple waste. Finally, a skincare brand that truly cares about sustainability. The jar mask is now a staple in my routine."</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-name">Mika L.</div>
+              <div class="testimonial-role">Seoul, South Korea</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-text">"The Bromelain Essence has transformed my morning routine. My skin feels hydrated all day and the brightness improvement is visible. 10/10 recommend!"</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <div class="testimonial-name">Arisa K.</div>
+              <div class="testimonial-role">Chiang Mai, Thailand</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Skin Analysis Preview -->
+  <section class="section" style="background:linear-gradient(135deg, var(--beige), var(--cream));">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:center;">
+        <div data-aos="fade-right">
+          <span class="text-overline">AI Technology</span>
+          <h2 style="margin-top:var(--space-md);">Smart Skin Analysis</h2>
+          <p style="color:var(--gray-500);margin-top:var(--space-lg);line-height:1.8;">
+            Our AI-powered skin analysis tool helps you understand your unique skin needs and 
+            recommends the perfect Bromelain Bright products for your skincare journey.
+          </p>
+          <ul class="check-list" style="margin-top:var(--space-lg);">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Instant skin type detection
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Personalized product recommendations
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Track your skin improvement journey
+            </li>
+          </ul>
+          <a href="ai-analysis.html" class="btn btn-primary" style="margin-top:var(--space-2xl);">Try AI Analysis →</a>
+        </div>
+        <div data-aos="fade-left" style="text-align:center;">
+          <div class="card-glass" style="padding:var(--space-2xl);max-width:400px;margin:0 auto;">
+            <div style="font-size:4rem;margin-bottom:var(--space-md);">🤖</div>
+            <h4 style="margin-bottom:var(--space-md);">AI Skin Score</h4>
+            <div style="width:120px;height:120px;border-radius:50%;border:4px solid var(--sage);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-lg);">
+              <span style="font-family:var(--font-display);font-size:var(--fs-3xl);font-weight:700;color:var(--sage);">87</span>
+            </div>
+            <div style="font-size:var(--fs-sm);color:var(--gray-500);">Your skin health is <strong style="color:var(--sage);">excellent</strong></div>
+            <div class="divider"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-md);font-size:var(--fs-xs);color:var(--gray-400);">
+              <div>Hydration: <strong style="color:var(--forest);">92%</strong></div>
+              <div>Brightness: <strong style="color:var(--forest);">85%</strong></div>
+              <div>Texture: <strong style="color:var(--forest);">88%</strong></div>
+              <div>Elasticity: <strong style="color:var(--forest);">83%</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Gallery -->
+  <section class="section-sm" style="background:var(--white);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="text-overline">@BromelainBright</span>
+        <h2>Join Our Community</h2>
+      </div>
+      <div class="gallery-grid" data-aos="fade-up">
+        <div class="gallery-item" style="background:linear-gradient(135deg, #e8f5e9, #c8e6c9);display:flex;align-items:center;justify-content:center;font-size:3rem;">🍍</div>
+        <div class="gallery-item" style="background:linear-gradient(135deg, #fff8e1, #ffecb3);display:flex;align-items:center;justify-content:center;font-size:3rem;">✨</div>
+        <div class="gallery-item" style="background:linear-gradient(135deg, #f1f8e9, #dcedc8);display:flex;align-items:center;justify-content:center;font-size:3rem;">🌿</div>
+        <div class="gallery-item" style="background:linear-gradient(135deg, #fce4ec, #f8bbd0);display:flex;align-items:center;justify-content:center;font-size:3rem;">💆‍♀️</div>
+        <div class="gallery-item" style="background:linear-gradient(135deg, #e0f2f1, #b2dfdb);display:flex;align-items:center;justify-content:center;font-size:3rem;">🧴</div>
+        <div class="gallery-item" style="background:linear-gradient(135deg, #fff3e0, #ffe0b2);display:flex;align-items:center;justify-content:center;font-size:3rem;">🌱</div>
+        <div class="gallery-item" style="background:linear-gradient(135deg, #e8eaf6, #c5cae9);display:flex;align-items:center;justify-content:center;font-size:3rem;">💧</div>
+        <div class="gallery-item" style="background:linear-gradient(135deg, #f3e5f5, #e1bee7);display:flex;align-items:center;justify-content:center;font-size:3rem;">🔬</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="newsletter" data-aos="fade-up">
+        <h2>Stay In The Glow</h2>
+        <p>Subscribe to receive exclusive offers, skincare tips, and sustainability updates.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-gold">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-logo" style="color:var(--white);font-size:var(--fs-xl);">Bromelain <span style="color:var(--sage);">Bright</span></div>
+          <p class="footer-desc">Transforming upcycled pineapple cores into premium skincare. Luxury beauty that's kind to the planet.</p>
+          <div class="footer-social" style="margin-top:var(--space-lg);">
+            <a href="#" title="Facebook">f</a>
+            <a href="#" title="Instagram">ig</a>
+            <a href="#" title="LINE">L</a>
+            <a href="#" title="LinkedIn">in</a>
+          </div>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="product-sachet.html">Facial Mask Sachet</a>
+            <a href="product-jar.html">Facial Mask Jar</a>
+            <a href="product-essence.html">Bromelain Essence</a>
+            <a href="shop.html">Shop All</a>
+          </div>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="company.html">Our Story</a>
+            <a href="research.html">Research</a>
+            <a href="sustainability.html">Sustainability</a>
+          </div>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="contact.html">Contact</a>
+            <a href="traceability.html">Traceability</a>
+            <a href="ai-analysis.html">AI Analysis</a>
+            <a href="login.html">My Account</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Bromelain Bright. All rights reserved.</span>
+        <span>Made with 🍍 in Thailand</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
+    // Render featured products on homepage
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProductCards(document.getElementById('featured-products'));
+    });
+  </script>
+</body>
+</html>

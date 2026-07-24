@@ -1,0 +1,301 @@
+/* ============================================
+   BROMELAIN BRIGHT — Responsive Design System
+   Auto-adapts layout & font sizing for all devices:
+   - Ultra Mobile (<380px)
+   - Mobile (<480px)
+   - Small Tablet (<768px)
+   - Tablet / Laptop (<1024px)
+   - Desktop / Wide Screen (>1280px)
+   ============================================ */
+
+/* --- Base Fluid Typography & Touch Optimization --- */
+html {
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix horizontal scrolling issue on mobile */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* --- Large Desktop (1280px+) --- */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 var(--space-3xl);
+  }
+}
+
+/* --- Tablet / Laptop (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    --fs-3xl: 2.25rem;
+    --fs-4xl: 3rem;
+    --fs-5xl: 3.5rem;
+  }
+
+  .grid-4 { grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
+
+  .hero-float { width: 320px; height: 320px; right: 2%; opacity: 0.8; }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  
+  /* Form & Checkout layout adjustments */
+  .grid-2 { gap: var(--space-lg); }
+}
+
+/* --- Small Tablet / iPad (max-width: 768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --fs-xl: 1.25rem;
+    --fs-2xl: 1.5rem;
+    --fs-3xl: 1.85rem;
+    --fs-4xl: 2.25rem;
+    --fs-5xl: 2.75rem;
+    --space-2xl: 2rem;
+    --space-3xl: 3rem;
+    --space-4xl: 4rem;
+    --space-5xl: 4.5rem;
+  }
+
+  .container, .container-narrow {
+    padding: 0 var(--space-md);
+  }
+
+  /* Navigation Mobile Toggle */
+  .nav-links { display: none !important; }
+  .nav-hamburger { display: flex !important; }
+
+  .hero {
+    min-height: auto;
+    padding: calc(var(--nav-height) + var(--space-2xl)) 0 var(--space-3xl);
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero p { 
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: var(--fs-base);
+  }
+
+  .hero-actions {
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  .hero-float { display: none; }
+
+  /* Stack All Grids Vertically on Mobile/Tablet */
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-lg);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .newsletter {
+    padding: var(--space-xl) var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .newsletter-form input {
+    width: 100%;
+    border-radius: var(--radius-md);
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    border-radius: var(--radius-md);
+  }
+
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
+
+  /* Responsive Tables with Horizontal Scroll */
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: var(--space-lg);
+  }
+
+  .comparison-table {
+    min-width: 500px;
+    font-size: var(--fs-xs);
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  /* Responsive Tabs */
+  .tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--space-xs);
+    justify-content: flex-start;
+  }
+
+  .tab {
+    white-space: nowrap;
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--fs-xs);
+  }
+
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .page-header {
+    padding: calc(var(--nav-height) + var(--space-xl)) 0 var(--space-xl);
+  }
+
+  /* Checkout & Cart Responsive Fixes */
+  #checkout-summary {
+    position: static !important;
+    margin-top: var(--space-xl);
+  }
+  
+  .payment-option-card {
+    padding: var(--space-sm);
+  }
+}
+
+/* --- Mobile Smartphones (max-width: 480px) --- */
+@media (max-width: 480px) {
+  :root {
+    --fs-base: 0.95rem;
+    --fs-lg: 1.05rem;
+    --fs-xl: 1.2rem;
+    --fs-2xl: 1.35rem;
+    --fs-3xl: 1.6rem;
+    --fs-4xl: 1.85rem;
+    --fs-5xl: 2.2rem;
+  }
+
+  /* Touch-friendly full width buttons */
+  .btn {
+    padding: 12px 20px;
+    font-size: var(--fs-xs);
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .btn-lg {
+    padding: 14px 24px;
+    font-size: var(--fs-sm);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .product-card-image {
+    aspect-ratio: 1;
+  }
+
+  .stat-card {
+    padding: var(--space-md);
+  }
+
+  .stat-number {
+    font-size: var(--fs-2xl);
+  }
+
+  .toast {
+    left: var(--space-sm);
+    right: var(--space-sm);
+    bottom: var(--space-sm);
+    font-size: var(--fs-xs);
+    padding: 10px 16px;
+    text-align: center;
+  }
+
+  .search-overlay {
+    padding: 15vh var(--space-md) var(--space-md);
+  }
+
+  .search-overlay-input {
+    font-size: var(--fs-lg);
+  }
+
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  .modal {
+    width: 92%;
+    padding: var(--space-md);
+    margin: 0 4%;
+  }
+
+  /* Form controls optimization on mobile */
+  .form-input, select.form-input, textarea.form-input {
+    font-size: 16px !important; /* Prevents iOS auto-zoom on input focus */
+    padding: 12px;
+  }
+}
+
+/* --- Ultra Small Mobile (max-width: 380px) --- */
+@media (max-width: 380px) {
+  :root {
+    --fs-3xl: 1.4rem;
+    --fs-4xl: 1.65rem;
+    --fs-5xl: 1.95rem;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .gallery-grid { grid-template-columns: 1fr; }
+  
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+}
+
+/* --- Print Mode Optimization --- */
+@media print {
+  .nav, .footer, .loading-screen, .toast, .nav-mobile, .search-overlay { display: none !important; }
+  body { background: white !important; color: black !important; }
+  .section { padding: 1rem 0; }
+  .card, .card-glass { border: 1px solid #ccc !important; box-shadow: none !important; }
+}
